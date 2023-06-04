@@ -1,0 +1,556 @@
+/*!
+Theme Name: Lego Theme
+Author: Cameron
+Description: This is my lego theme for TAFE
+Version: 1.0.0
+Requires at least: 5
+Tested up to: 6.2
+Requires PHP: 7.4+
+Text Domain: legotheme
+Tags: custom-logo, custom-menu, featured-images
+*/
+
+/* Variables */
+:root {
+  --font-heading: "Sarpanch", Helvetica, sans-serif;
+  --font-sans: "Quicksand", Helvetica, sans-serif;
+  --font-serif: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman,
+    Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol;
+  --font-size: 18px;
+  --color-primary: #159BCE;
+  --color-secondary: #ffda00;
+  --color-tertiary: #B33F62;
+  --color-dark: #333;
+  --color-light: #f2f2f2;
+  --transition-dur: 0.3s;
+}
+
+/* Typography */
+body {
+  font-family: var(--font-sans);
+  font-size: var(--font-size);
+  line-height: 1.5;
+}
+
+p {
+  color: #000;
+  font-weight: 400;
+}
+
+em {
+  color: #828282;
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+  transition: var(--transition-dur);
+  color: var(--color-primary);
+}
+
+a:hover {
+  color: var(--color-dark);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+}
+
+h1 {
+  color: var(--color-light);
+  font-size: 4rem;
+}
+
+h1.dark {
+  color: var(--color-dark);
+}
+
+h2 {
+  color: var(--color-dark);
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  transition: var(--transition-dur);
+}
+
+h3 {
+  color: var(--color-dark);
+  font-size: 2rem;
+  margin-bottom: 0.9rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.testimonial p,
+blockquote.wp-block-quote p {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-style: italic;
+  text-align: left;
+  line-height: 1.5;
+  margin: 2rem 0 2rem 2rem;
+}
+
+.testimonial p,
+blockquote.wp-block-quote p {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.testimonial cite {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 1.2rem;
+  font-style: normal;
+}
+
+cite span {
+  color: #828282;
+}
+
+.spacer {
+  margin: 75px 0;
+}
+
+/* logo */
+
+.logo-image {
+  max-width: 250px;
+}
+
+/* Button Styles */
+
+.btn {
+  padding: 10px 10px;
+  display: inline-block;
+  border: none;
+  transition: var(--transition-dur);
+  margin-bottom: 20px;
+  font-weight: bold;
+  min-width: 150px;
+  gap: 20px;
+}
+
+.btn.btn-primary {
+  color: #fff;
+  background-color: var(--color-primary);
+}
+
+.btn.btn-secondary {
+  color: #fff;
+  background-color: var(--color-secondary);
+  ;
+}
+
+.btn.btn-light {
+  color: var(--color-primary);
+  background-color: var(--color-light);
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: var(--color-dark);
+}
+
+/* Forms */
+
+input[type="text"] {
+  font-size: 1rem;
+  padding: 8px 5px;
+  border-radius: 5px;
+}
+
+/* TOP NAV */
+
+#main-navbar {
+  flex-grow: 0;
+}
+
+ul#menu-primary-menu {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.current-menu-item a {
+  color: var(--color-primary);
+}
+
+.blog-title {
+  margin: 0px;
+}
+
+.blog-title a {
+  color: #000;
+}
+
+/* Title Banner */
+
+.title-banner {
+  padding: 120px 0;
+  background: url('images/legothemebg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.title-banner .sub-title {
+  color: var(--color-secondary);
+}
+
+/* Subscribe Bar */
+
+.subscribe-bar {
+  background-color: #282c37;
+  padding: 30px 0;
+}
+
+.subscribe-bar p {
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.subscribe-bar h2,
+.subscribe-bar h3 {
+  color: #fff;
+}
+
+@media screen and (max-width: 576px) {
+  .subscribe-bar p {
+    margin-bottom: 20px;
+  }
+}
+
+.subscribe-bar input,
+.subscribe-bar .btn {
+  width: 100%;
+  overflow: hidden;
+  display: inline-block;
+}
+
+/* .subscribe-bar .container .row {
+  display: flex;
+  align-items: center;
+} */
+
+.flex-vertical-center {
+  display: flex;
+  align-items: center;
+}
+
+/* Content Section */
+
+.content-area {
+  padding: 75px 0;
+}
+
+.content-area.content-404 {
+  padding: 0px 0px 100px 0px;
+}
+
+.ztm-page {
+  padding: 0 0 75px 0;
+}
+
+/* Post List */
+.card-img-top {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  max-height: 230px;
+  margin-bottom: 1rem;
+}
+
+.card-img-left {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+article.post {
+  margin: 50px 0;
+}
+
+.post .meta {
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+}
+
+.blog .post h2 a {
+  font-size: 3rem;
+  color: #111;
+}
+
+.blog .post h2 a:hover {
+  color: var(--color-primary);
+}
+
+.blog .post p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #828282;
+  line-height: 1.5;
+}
+
+.blog .post .read-more {
+  color: var(--color-primary);
+  font-size: 1.2rem;
+  font-weight: 500;
+  display: inline-block;
+  margin-top: 12px;
+  transition: var(--transition-dur);
+}
+
+.blog .post a.read-more:hover {
+  color: var(--color-primary);
+  padding-left: 5px;
+}
+
+/* Footer Section */
+
+.legofooter {
+  padding: 100px 0;
+  background: #282c37;
+}
+
+.legofooter .sub-title {
+  color: var(--color-primary);
+}
+
+.legofooter h2 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+  font-size: 2.2rem;
+}
+
+.legofooter h3 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.legofooter p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.legofooter .btn {
+  margin-top: 2rem;
+}
+
+.copyright {
+  background-color: #f5f5f5;
+  padding: 50px 0;
+}
+
+.copyright p {
+  color: rgba(0, 0, 0, 0.385);
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+/* pagination */
+
+.legotheme-pagination {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.legotheme-pagination li {
+  position: relative;
+  margin-left: 6px;
+  display: inline-block;
+}
+
+.legotheme-pagination li .page-numbers {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 40px;
+  text-align: center;
+  display: inline-block;
+  transition: all var(--transition-dur) ease;
+  background-color: var(--color-dark);
+}
+
+.legotheme-pagination li .page-numbers.current,
+.legotheme-pagination li:hover a {
+  background-color: var(--color-primary);
+  ;
+}
+
+/* 404 page */
+
+.image-404 {
+  max-width: 600px;
+}
+
+.row-404 {
+  justify-content: center;
+}
+
+#custom-search-input {
+  margin: 0;
+  margin-top: 10px;
+  padding: 0;
+}
+
+#custom-search-input .search-query {
+  padding-right: 3px;
+  padding-right: 4px \9;
+  padding-left: 3px;
+  padding-left: 4px \9;
+  /* IE7-8 doesn't have border-radius, so don't indent the padding */
+
+  margin-bottom: 0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/* Range Slider - Sets page*/
+.range_container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 25px auto;
+}
+
+.sliders_control {
+  position: relative;
+  min-height: 50px;
+}
+
+.form_control {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  color: #635a5a;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  pointer-events: all;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px #C6C6C6;
+  cursor: pointer;
+}
+
+input[type=range]::-moz-range-thumb {
+  -webkit-appearance: none;
+  pointer-events: all;
+  width: 24px;
+  height: 24px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px #C6C6C6;
+  cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-thumb:hover {
+  background: #f7f7f7;
+}
+
+input[type=range]::-webkit-slider-thumb:active {
+  box-shadow: inset 0 0 3px #387bbe, 0 0 9px #387bbe;
+  -webkit-box-shadow: inset 0 0 3px #387bbe, 0 0 9px #387bbe;
+}
+
+input[type="number"] {
+  color: #8a8383;
+  width: 50px;
+  height: 30px;
+  font-size: 20px;
+  border: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  opacity: 1;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  background-color: #C6C6C6;
+  pointer-events: none;
+}
+
+#fromSlider {
+  height: 0;
+  z-index: 1;
+}
+
+#custom-search-input button {
+  border: 0;
+  background: none;
+  /** belows styles are working good */
+  padding: 2px 5px;
+  margin-top: 2px;
+  position: relative;
+  left: -28px;
+  /* IE7-8 doesn't have border-radius, so don't indent the padding */
+  margin-bottom: 0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  color: var(--color-primary);
+}
+
+.search-query:focus+.input-group-btn {
+  z-index: 3;
+}
+
+.input-group-btn {
+  width: 0px;
+}
+
+.half-bg {
+  top: 0px;
+  left: 0px;
+  width: 60%;
+  height: 100%;
+  background-color: var(--color-primary);
+  z-index: -1;
+  position: absolute;
+}
+
+.profile-img {
+  border-radius: 50%;
+  margin-top: -50%;
+}
+
+.nav-profile-img {
+  border-radius: 50%;
+  width:34px;
+}
+
+@media (max-width: 768px) {
+  .half-bg {
+    width: 100%;
+  }
+  .nav-sep {
+    display: none;
+  }
+}
